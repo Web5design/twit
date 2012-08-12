@@ -3,7 +3,7 @@
 
 
 ## DEMO
-* (http://grayghostvisuals.koding.com/twit)[http://grayghostvisuals.koding.com/twit]
+* [http://grayghostvisuals.koding.com/twit](http://grayghostvisuals.koding.com/twit)
 
 
 ## ABOUT
