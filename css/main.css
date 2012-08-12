@@ -90,36 +90,82 @@ textarea {
     resize: vertical;
 }
 
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 
+body {
+    background: url(../img/dark_mosaic.png) top left repeat;
+    color: #f9f9f9;
+}
 
+.container {
+    max-width: 40em;
+    margin: 1.5em auto;
+    padding: 0 5%;
+}
 
+a,
+.twit_avatar a,
+.twit_timestamp a {
+    text-decoration: none;
 
+    color: #c94f00;
+}
 
+a:hover,
+.twit_avatar a:hover,
+.twit_timestamp a:hover {
+    color: #ff6900;
+}
 
+#twitter_update_list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 40em;
+    margin: 1.5em auto;
+}
 
+#twitter_feed {
+    display: inline-block;
+    margin-bottom: 1.5em;
+}
 
+.title {
+    margin: 0;
+    padding-left: 80px;
+    background: url(../img/logo.png) 30% 0 no-repeat;
+    height: 80px;
+    width: 30px;
+}
 
+.title span {
+    position: relative;
+    top: 30px;
+    left: 0;
+}
 
+.tagline {
+    font-size: 1em;
+}
 
+footer {
+    text-align: center;
 
+    color: #c94f00;
 
+    font-size: 1.5em;
+}
 
+footer small {
+    font-size: .5em;
+}
 
+footer p {
+    margin: 0;
+}
 
 /* ==========================================================================
    Helper classes
