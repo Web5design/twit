@@ -97,7 +97,8 @@ textarea {
 
 
 body {
-    background: url(../img/dark_mosaic.png) top left repeat;
+    /*background: url(../img/dark_mosaic.png) top left repeat;*/
+    background: #457388;
     color: #f9f9f9;
 }
 
@@ -107,19 +108,13 @@ body {
     padding: 0 5%;
 }
 
-a,
-.twit_avatar a,
-.twit_timestamp a {
-    text-decoration: none;
-
-    color: #c94f00;
-}
-
-a:hover,
-.twit_avatar a:hover,
-.twit_timestamp a:hover {
-    color: #ff6900;
-}
+/*
+ * .twit {}
+ * .twit-timestamp {}
+ * .twit-meta {}
+ * .twit-status {}
+ * .twit-avatar {}
+ */
 
 #twitter_update_list {
     list-style-type: none;
@@ -133,12 +128,31 @@ a:hover,
     margin-bottom: 1.5em;
 }
 
+a,
+.twit_avatar a,
+.twit_timestamp a {
+    text-decoration: none;
+
+    color: #acbaca;
+}
+
+a:hover,
+.twit_avatar a:hover,
+.twit_timestamp a:hover {
+    color: #ff6900;
+}
+
 .title {
-    margin: 0;
-    padding-left: 80px;
-    background: url(../img/logo.png) 30% 0 no-repeat;
-    height: 80px;
-    width: 30px;
+    margin: 0 auto;
+    padding-left: 128px;
+    height: 128px;
+    width: 128px;
+
+    background: url(../img/twit-logo.png) 0 0 no-repeat;
+    background-size: 128px 128px;
+
+    text-align: center;
+    text-indent: -999em;
 }
 
 .title span {
@@ -152,10 +166,9 @@ a:hover,
 }
 
 footer {
+    color: #132131;
+
     text-align: center;
-
-    color: #c94f00;
-
     font-size: 1.5em;
 }
 

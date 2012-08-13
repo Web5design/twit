@@ -1,5 +1,6 @@
 // Twitter Status Callback
-function twitterCallback2(tweet) {
+function twitterCallback(tweet) {
+
     var statusHTML = [];
 
     for (var i=0; i < tweet.length; i++){
@@ -12,7 +13,7 @@ function twitterCallback2(tweet) {
 
         });
 
-        statusHTML.push('<li class="twit"><p class="twit_avatar"><a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '"><img src="' + profileimageURL + '" alt="">' + '@' + username + '</a></p> <p class="twit_tweet">' + status + '</p> <p><small><time class="twit_timestamp" pubdate><a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '">' + relative_time(tweet[i].created_at) + '</a></small></p></li>');
+        statusHTML.push('<li class="twit"><p><a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '"><img src="' + profileimageURL + '" alt="twitter avatar" class="twit-avatar">' + '@' + username + '</a></p> <p class="twit-status">' + status + '</p> <p class="twit-meta"><small><time datetime="' + relative_time(tweet[i].created_at) + '" class="twit-timestamp" pubdate><a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '">' + relative_time(tweet[i].created_at) + '</a></time></small></p></li>');
     }
 
     document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
@@ -28,12 +29,31 @@ function relative_time(time_value) {
         postedAt    = '';
 
     time_value = values[1] + " " + values[2] + " " + values[5] + " " + values[3];
-    parsed_date.setTime(Date.parse(time_value)); 
+    parsed_date.setTime(Date.parse(time_value));
 
     postedAt = months[m];
     postedAt += " " + parsed_date.getDate();
-    postedAt += ","
+    postedAt += ",";
     postedAt += " " + parsed_date.getFullYear();
 
     return postedAt;
 }
+
+// Load Twit
+window.onload = function() {
+    var ajax_load            = "<img class='loader' src='img/loading.gif' alt='Loading...'>",
+        twitter_preferences  = {
+                                    count    : 4,
+                                    username : 'gryghostvisuals'
+                                },
+        twitterUrl           = 'http://twitter.com/statuses/user_timeline.json?screen_name=' + twitter_preferences.username + '&callback=twitterCallback&count=' + twitter_preferences.count,
+
+        script               = document.createElement('script');
+
+    $("#twitter_feed").html(ajax_load);
+
+    script.setAttribute('src', twitterUrl);
+    script.setAttribute('async', true);
+
+    document.body.appendChild(script);
+};
