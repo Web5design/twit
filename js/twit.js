@@ -13,7 +13,7 @@ function twitterCallback(tweet) {
 
         });
 
-        statusHTML.push('<li class="twit"><p><a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '"><img src="' + profileimageURL + '" alt="twitter avatar" class="twit-avatar">' + '@' + username + '</a></p> <p class="twit-status">' + status + '</p> <p class="twit-meta"><small><time datetime="' + relative_time(tweet[i].created_at) + '" class="twit-timestamp" pubdate><a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '">' + relative_time(tweet[i].created_at) + '</a></time></small></p></li>');
+        statusHTML.push('<li class="twit"><p><a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '" class="link"><img src="' + profileimageURL + '" alt="twitter avatar icon" class="twit-avatar">' + '@' + username + '</a></p> <p class="twit-status">' + status + '</p> <p class="twit-meta"><small><time datetime="' + relative_time(tweet[i].created_at) + '" class="twit-timestamp" pubdate><a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '" class="link">' + relative_time(tweet[i].created_at) + '</a></time></small></p></li>');
     }
 
     document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
@@ -41,9 +41,9 @@ function relative_time(time_value) {
 
 // Load Twit
 window.onload = function() {
-    var ajax_load            = "<img class='loader' src='img/loading.gif' alt='Loading...'>",
+    var ajax_load            = "<img class='twit-loader' src='img/loading.gif' alt='Loading...'>",
         twitter_preferences  = {
-                                    count    : 4,
+                                    count    : 1,
                                     username : 'gryghostvisuals'
                                 },
         twitterUrl           = 'http://twitter.com/statuses/user_timeline.json?screen_name=' + twitter_preferences.username + '&callback=twitterCallback&count=' + twitter_preferences.count,
