@@ -1,9 +1,9 @@
-# twit v0.0.3
+# twit v0.0.4
 ### Your Custom Twitter Widget : "Embed Tweets The Right Way"
 
 ### DEMO
 * [http://grayghostvisuals.koding.com/twit](http://grayghostvisuals.koding.com/twit)
-* Green light for all browsers with all Operating Systems (Windows, Mac, Linux)
+* Green light for any browser on all Operating Systems (Windows, Mac, Linux)
 
 [![http://grayghostvisuals.koding.com/twit](http://static.grayghostvisuals.com/github/twit.png)](http://grayghostvisuals.koding.com/twit)
 
@@ -58,9 +58,9 @@ window.onload = function() {
 </pre>
 
 ### GOTCHYAS
+1. Unauthenticated Twitter API calls are permitted 150 requests per hour [https://dev.twitter.com/docs/rate-limiting](https://dev.twitter.com/docs/rate-limiting)
 
-### GOTCHYAS
-Unauthenticated Twitter API calls are permitted 150 requests per hour [https://dev.twitter.com/docs/rate-limiting](https://dev.twitter.com/docs/rate-limiting)
+2. Retweets and favorites will not display currently. Only single user tweets will display at the moment (this will eventually change)
 
 ### IN THE PIPELINE
 1. jQuery Plugin &rarr; checkout our [jQueryPlugin feature branch](https://github.com/grayghostvisuals/twit/tree/feature/jQueryPlugin)
