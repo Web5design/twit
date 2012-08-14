@@ -31,10 +31,10 @@ function replaceReply(reply) {
 // Twit Time Stamp
 function relative_time(time_value) {
 
-    var values    = time_value.split(" "),
+    var values      = time_value.split(" "),
         parsed_date = new Date(),
-        months    = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'),
-        m         = parsed_date.getMonth(),
+        months      = new Array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'),
+        m           = parsed_date.getMonth(),
         postedAt    = '';
 
     time_value = values[1] + " " + values[2] + " " + values[5] + " " + values[3];
@@ -50,7 +50,7 @@ function relative_time(time_value) {
 
 // Load Twit
 window.onload = function() {
-    var ajax_load        = "<img class='twit-loader' src='img/loading.gif' alt='Loading...'>",
+    var ajax_load            = "<img class='twit-loader' src='img/loading.gif' alt='Loading...'>",
         twitter_preferences  = {
             count    : 1,
             username : 'gryghostvisuals'
