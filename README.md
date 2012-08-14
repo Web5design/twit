@@ -1,15 +1,14 @@
 # twit v0.0.3
-Your Custom Twitter Widget : "Embed Tweets The Right Way"
-=====================================================================================
+## Your Custom Twitter Widget : "Embed Tweets The Right Way"
 
-## DEMO
+### DEMO
 * [http://grayghostvisuals.koding.com/twit](http://grayghostvisuals.koding.com/twit)
 
 [![http://grayghostvisuals.koding.com/twit](http://static.grayghostvisuals.com/github/twit.png)](http://grayghostvisuals.koding.com/twit)
 
 
-## TWIT'S RECIPE
-### <code>index.html</code>
+### TWIT'S RECIPE
+#### <code>index.html</code>
 <pre>
 <code>
 &lt;head&gt;
@@ -33,15 +32,15 @@ Your Custom Twitter Widget : "Embed Tweets The Right Way"
 </code>
 </pre>
 
-## USERNAME and TWIT DISPLAY SETUP
-### <code>twit.js</code>
+### USERNAME and TWIT DISPLAY SETUP
+#### <code>twit.js</code>
 <pre>
 <code>
 // Load Twit
 window.onload = function() {
     var ajax_load            = &quot;&lt;img class=&#39;twit-loader&#39; src=&#39;img/loading.gif&#39; alt=&#39;Loading...&#39;&gt;&quot;,
         twitter_preferences  = {
-            count    : [number_of_twits_goes_here],
+            count    : [enter_twit_count_here],
             username : &#39;[username_goes here]&#39;
         },
         twitterUrl = &#39;http://twitter.com/statuses/user_timeline.json?screen_name=&#39;   twitter_preferences.username   &#39;&amp;callback=twitterCallback&amp;count=&#39;   twitter_preferences.count,
@@ -58,11 +57,11 @@ window.onload = function() {
 </pre>
 
 
-## GOTCHYAS
+### GOTCHYAS
 Unauthenticated Twitter API calls are permitted 150 requests per hour [https://dev.twitter.com/docs/rate-limiting](https://dev.twitter.com/docs/rate-limiting)
 
 
-## IN THE PIPELINE
+### IN THE PIPELINE
 1. jQuery Plugin &rarr; checkout our [jQueryPlugin feature branch](https://github.com/grayghostvisuals/twit/tree/feature/jQueryPlugin)
 
 2. Due to unauthenticated Twitter API requests being limited to 150 per hour we're working out a way to cache them properly. Feel free to chime in if you have a better way or are great with Twitter's oAuth (350 per hour)
