@@ -7,7 +7,7 @@
 ## ABOUT
 Your Custom Twitter Widget : "Embed Tweets The Right Way"
 
-[![http://grayghostvisuals.koding.com/twit](http://static.grayghostvisuals.com/github/twit/twit.png)](http://grayghostvisuals.koding.com/twit)
+
 
 ## TWIT'S RECIPE
 <pre>
