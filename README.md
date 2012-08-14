@@ -1,8 +1,9 @@
 # twit v0.0.3
-## Your Custom Twitter Widget : "Embed Tweets The Right Way"
+### Your Custom Twitter Widget : "Embed Tweets The Right Way"
 
 ### DEMO
 * [http://grayghostvisuals.koding.com/twit](http://grayghostvisuals.koding.com/twit)
+* Green light for all browsers with all Operating Systems (Windows, Mac, Linux)
 
 [![http://grayghostvisuals.koding.com/twit](http://static.grayghostvisuals.com/github/twit.png)](http://grayghostvisuals.koding.com/twit)
 
@@ -56,16 +57,15 @@ window.onload = function() {
 </code>
 </pre>
 
+### GOTCHYAS
 
 ### GOTCHYAS
 Unauthenticated Twitter API calls are permitted 150 requests per hour [https://dev.twitter.com/docs/rate-limiting](https://dev.twitter.com/docs/rate-limiting)
-
 
 ### IN THE PIPELINE
 1. jQuery Plugin &rarr; checkout our [jQueryPlugin feature branch](https://github.com/grayghostvisuals/twit/tree/feature/jQueryPlugin)
 
 2. Due to unauthenticated Twitter API requests being limited to 150 per hour we're working out a way to cache them properly. Feel free to chime in if you have a better way or are great with Twitter's oAuth (350 per hour)
-
 
 ## CONTRIBUTORS
 We would like to thank the following contributors and their awesome-nesses...
