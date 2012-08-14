@@ -95,22 +95,21 @@ textarea {
    Globals
    ========================================================================== */
 
-
 body {
-    /*background: url(../img/dark_mosaic.png) top left repeat;*/
-    background: #224466;
+    background: #00384f;
     color: #f9f9f9;
 
     font: normal normal 100%/1.5 "Helvetica Neue", sans-serif;
 }
 
 .container {
-    background: url(../img/twit-bg.png) 50% 0% no-repeat;
-    max-width: 50em;
-    height: 800px;
-    margin: 1.5em auto;
-    padding: 0 5%;
+    height: 50em;        /* 50em * 16px = 800px */
+    margin: 0 auto;
+    max-width: 50em;     /* 50em * 16px = 800px */
+    padding: 1.5em 10em; /* 160px / 16px = 10em */
     position: relative;
+
+    background: url(../img/twit-bg.png) 50% 15% no-repeat;
 }
 
 
@@ -120,14 +119,14 @@ body {
 
 .title-header {
     margin: 0 auto;
-    width: 50em;
     position: absolute;
-    bottom: 0px;
+    bottom: 1.875em; /* 30px / 16px = 1.875em */
+    width: 50em; /* 50em * 16px = 800px */
 }
 
 .title {
+    height: 4.0625em; /* 130px / 32px = 4.0625em */
     width: 100%;
-    height: 130px;
 
     background: url(../img/twit-logo.png)  200px 0 no-repeat;
 
@@ -136,11 +135,12 @@ body {
 }
 
 .tagline {
-    color: #175e8b;
+    color: #3f8098;
 
     font-size: .875em;
     text-align: center;
-    text-shadow: 
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.6),
+                 0  1px 1px rgba(255, 255, 255, 0.15);
 }
 
 
@@ -149,7 +149,7 @@ body {
    ========================================================================== */
 
 /*
- * Here are the blank classes
+ * Here are the classes
  * we use for customizing
  * beyond the demo styles
 
@@ -172,15 +172,18 @@ body {
  *
  */
 
+/* General Markup Styling
+ ======================== */
+
 #twit-container {
     border-radius: 12px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.18);
-    min-height: 128px;
-    margin-left: 56px;
-    margin-top: 64px;
-    padding: 2px;
+    min-height: 8em;     /* 128px / 16px = 8em */
+    margin-left: 3.5em;  /* 56px / 16px = 3.5em */
+    margin-top: 4.625em; /* 74px / 16px = 4.625em */
+    padding: 0.125em;    /* 2px / 16px = 0.125em */
     position: absolute;
-    width: 256px;
+    width: 16em; /* 256px / 16px = 16em */
 
     background: #88b7d5;
     background: rgba(117, 176, 207, 0.5);
@@ -202,13 +205,13 @@ body {
     border-left-color: #185b86;
     border-left-color: rgba(117, 176, 207, 0.5);
     border-width: 20px;
-    top: 50%;
     margin-top: -20px;
+    top: 65%;
 }
 
 #twitter_update_list {
     list-style-type: none;
-    max-width: 40em;
+    max-width: 40em; /* 40em * 16px = 640px */
     padding: 0 5%;
 
     font-size: .875em;
@@ -217,6 +220,24 @@ body {
 #twitter_feed {
     display: inline-block;
     margin-bottom: 1.5em;
+}
+
+
+/* Helper Module Classes
+ ======================== */
+
+.twit-loader {
+    box-shadow: inset 1px 1px 0px rgba(0,0,0,.5),
+                inset -1px -1px 0px rgba(255,255,255,.4);
+    border-radius: 4px;
+    display: inline-block;
+    padding: .25em;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+
+    background: #10293b;
+    background: rgba(10, 37, 51, 0.25);
 }
 
 .twit .link,
@@ -237,16 +258,16 @@ body {
    ========================================================================== */
 
 footer {
-    padding-top: 800px;
+    padding-top: 33.3333333333333em; /* 800px / 24 = 33.3333333333333em */
 
-    color: #cdcfd1;
+    color: #efefef;
 
     text-align: center;
     font-size: 1.5em;
 }
 
 footer small {
-    font-size: .5em;
+    font-size: .375em;
 }
 
 footer p {
@@ -259,11 +280,13 @@ footer p {
    ========================================================================== */
 
 .copyright {
-    border-top: .0675em solid #185d89;
+    border-top: .0675em solid #15496b;
     box-shadow: 0 -1px 0px #000;
 }
 
 .footer-entity {
-    color: #185d89;
-    text-shadow: 0 -1px 0px rgba(255,255,255,.3), 0 1px 0px rgba(0,0,0,.5);
+    color: #3f788d;
+
+    text-shadow: 0   1px 0px rgba(255,255,255,.3),
+                 0  -1px 0px rgba(0,0,0,.5);
 }

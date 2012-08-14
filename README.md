@@ -1,15 +1,15 @@
 # twit v0.0.3
+Your Custom Twitter Widget : "Embed Tweets The Right Way"
 =====================================================================================
 
 ## DEMO
 * [http://grayghostvisuals.koding.com/twit](http://grayghostvisuals.koding.com/twit)
 
-## ABOUT
-Your Custom Twitter Widget : "Embed Tweets The Right Way"
-
 [![http://grayghostvisuals.koding.com/twit](http://static.grayghostvisuals.com/github/twit.png)](http://grayghostvisuals.koding.com/twit)
 
+
 ## TWIT'S RECIPE
+### <code>index.html</code>
 <pre>
 <code>
 &lt;head&gt;
@@ -18,7 +18,7 @@ Your Custom Twitter Widget : "Embed Tweets The Right Way"
 &lt;script&gt;window.jQuery || document.write(&#39;&lt;script src=&quot;js/vendor/jquery-1.8.0.min.js&quot;&gt;&lt;\/script&gt;&#39;)&lt;/script&gt;
 
 &lt;!-- Twit --&gt;
-&lt;script src=&quot;js/minified/twit-min.js&quot; async&gt;&lt;/script&gt;
+&lt;script src=&quot;js/twit.js&quot; async&gt;&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
@@ -33,13 +33,45 @@ Your Custom Twitter Widget : "Embed Tweets The Right Way"
 </code>
 </pre>
 
+## USERNAME and TWIT DISPLAY SETUP
+### <code>twit.js</code>
+<pre>
+<code>
+// Load Twit
+window.onload = function() {
+    var ajax_load            = &quot;&lt;img class=&#39;twit-loader&#39; src=&#39;img/loading.gif&#39; alt=&#39;Loading...&#39;&gt;&quot;,
+        twitter_preferences  = {
+            count    : [number_of_twits_goes_here],
+            username : &#39;[username_goes here]&#39;
+        },
+        twitterUrl = &#39;http://twitter.com/statuses/user_timeline.json?screen_name=&#39;   twitter_preferences.username   &#39;&amp;callback=twitterCallback&amp;count=&#39;   twitter_preferences.count,
+        script     = document.createElement(&#39;script&#39;);
+
+    $(&quot;#twitter_feed&quot;).html(ajax_load);
+
+    script.setAttribute(&#39;src&#39;, twitterUrl);
+    script.setAttribute(&#39;async&#39;, true);
+
+    document.body.appendChild(script);
+};
+</code>
+</pre>
+
+
 ## GOTCHYAS
-* Unauthenticated Twitter API calls are permitted 150 requests per hour [https://dev.twitter.com/docs/rate-limiting](https://dev.twitter.com/docs/rate-limiting)
+Unauthenticated Twitter API calls are permitted 150 requests per hour [https://dev.twitter.com/docs/rate-limiting](https://dev.twitter.com/docs/rate-limiting)
+
+
+## IN THE PIPELINE
+1. jQuery Plugin &rarr; checkout our [jQueryPlugin feature branch](https://github.com/grayghostvisuals/twit/tree/feature/jQueryPlugin)
+
+2. Due to unauthenticated Twitter API requests being limited to 150 per hour we're working out a way to cache them properly. Feel free to chime in if you have a better way or are great with Twitter's oAuth (350 per hour)
+
 
 ## CONTRIBUTORS
-We would like to thank the following contributors and their awesome-nesses
+We would like to thank the following contributors and their awesome-nesses...
 
-* &#10026; [Tim Pietrusky](https://github.com/TimPietrusky)
+&#10026; [Tim Pietrusky](https://github.com/TimPietrusky)
   1. JSHint corrections (twit.js)
   2. Callback Function Rewrites (twit.js)
   3. Twitter API Unauthenticated calls research
