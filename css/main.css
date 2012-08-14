@@ -136,10 +136,11 @@ body {
 }
 
 .tagline {
-    color: #639ab6;
+    color: #175e8b;
 
     font-size: .875em;
     text-align: center;
+    text-shadow: 
 }
 
 
@@ -250,4 +251,19 @@ footer small {
 
 footer p {
     margin: 0;
+}
+
+
+/* ==========================================================================
+   Copyright Module
+   ========================================================================== */
+
+.copyright {
+    border-top: .0675em solid #185d89;
+    box-shadow: 0 -1px 0px #000;
+}
+
+.footer-entity {
+    color: #185d89;
+    text-shadow: 0 -1px 0px rgba(255,255,255,.3), 0 1px 0px rgba(0,0,0,.5);
 }
