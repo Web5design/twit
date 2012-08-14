@@ -1,6 +1,5 @@
-# twit v0.0.1
+# twit v0.0.2
 =====================================================================================
-
 
 ## DEMO
 * [http://grayghostvisuals.koding.com/twit](http://grayghostvisuals.koding.com/twit)
