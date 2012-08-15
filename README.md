@@ -1,4 +1,4 @@
-# twit v0.0.4
+# twit v0.0.5
 ### Your Custom Twitter Widget : "Embed Tweets The Right Way"
 
 ### DEMO
@@ -66,6 +66,13 @@ window.onload = function() {
 1. jQuery Plugin &rarr; checkout our [jQueryPlugin feature branch](https://github.com/grayghostvisuals/twit/tree/feature/jQueryPlugin)
 
 2. Due to unauthenticated Twitter API requests being limited to 150 per hour we're working out a way to cache them properly. Feel free to chime in if you have a better way or are great with Twitter's oAuth (350 per hour)
+
+### CONTRIBUTING REQUIREMENTS
+1. No Whitespace
+2. Play Nice
+3. Keep it simple stupid
+4. Use a clean branching model with forks (We use Gitflow Model w/SourceTree: Master &rarr; Develop &rarr; Feature &rarr; Hot Fix &rarr; Release)
+5. Don't shoot the bird
 
 ## CONTRIBUTORS
 We would like to thank the following contributors and their awesome-nesses...
