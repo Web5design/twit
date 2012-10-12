@@ -44,7 +44,7 @@ window.onload = function() {
             count    : [enter_twit_count_here],
             username : &#39;[username_goes here]&#39;
         },
-        twitterUrl = &#39;http://twitter.com/statuses/user_timeline.json?screen_name=&#39;   twitter_preferences.username   &#39;&amp;callback=twitterCallback&amp;count=&#39;   twitter_preferences.count,
+        twitterUrl = &#39;http://twitter.com/statuses/user_timeline.json?screen_name=&#39; + twitter_preferences.username + &#39;&amp;callback=twitterCallback&amp;count=&#39; + twitter_preferences.count,
         script     = document.createElement(&#39;script&#39;);
 
     $(&quot;#twitter_feed&quot;).html(ajax_load);
@@ -66,6 +66,13 @@ window.onload = function() {
 1. jQuery Plugin &rarr; checkout our [jQueryPlugin feature branch](https://github.com/grayghostvisuals/twit/tree/feature/jQueryPlugin)
 
 2. Due to unauthenticated Twitter API requests being limited to 150 per hour we're working out a way to cache them properly. Feel free to chime in if you have a better way or are great with Twitter's oAuth (350 per hour)
+
+### UPDATES AND NEWS
+August 16, 2012 &ndash; API v1.1 migration period
+1. Version 1.1 of the Twitter API. [https://dev.twitter.com/blog/changes-coming-to-twitter-api](https://dev.twitter.com/blog/changes-coming-to-twitter-api)
+    * required authentication on every API endpoint
+    * a new per-endpoint rate-limiting methodology
+    * changes to our Developer Rules of the Road, especially around applications that are traditional Twitter clients.
 
 ### CONTRIBUTING REQUIREMENTS
 1. No Whitespace
