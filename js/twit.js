@@ -82,7 +82,7 @@ function relative_time(time_value) {
 window.onload = function() {
     var ajax_load            = "<img class='twit-loader' src='img/loading.gif' alt='Loading...'>",
         twitter_preferences  = {
-            count    : 1,
+            count    : 2,
             username : 'gryghostvisuals'
         },
         twitterUrl = 'http://twitter.com/statuses/user_timeline.json?screen_name=' + twitter_preferences.username + '&callback=twitterCallback&count=' + twitter_preferences.count,
