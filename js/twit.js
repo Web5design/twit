@@ -13,31 +13,7 @@ function twitterCallback(tweet) {
         status = status.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s<>]*[^.,;'">\:\s<>\)\]\!])/g, replaceUrl);
         status = status.replace(/\B@([_a-z0-9]+)/ig, replaceReply);
 
-        statusHTML.push(
-            '<li class="twit">
-                <ul class="twit-list">
-                    <li class="twit-info">
-                        <a href="http://twitter.com/' + username + '" class="link" rel="me"><img src="' + profileimageURL + '" alt="'+ username + 'twitter avatar" class="avatar"></a>
-                    </li>
-
-                    <li class="twit-info">
-                        <a href="http://twitter.com/' + username + '" class="link" rel="author">' + '@' + username + '</a>
-                    </li>
-
-                    <li class="twit-info">
-                        <small class="twit-meta">
-                            <time datetime="' + relative_time(tweet[i].created_at) + '" class="twit-timestamp" pubdate>
-                                Tweet Posted : <a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '" class="link">' + relative_time(tweet[i].created_at) + '</a>
-                            </time>
-                        </small>
-                    </li>
-
-                    <li class="twit-info">
-                        <p class="twit-status">' + status + '</p>
-                    </li>
-                </ul>
-            </li>'
-        );
+        statusHTML.push('<li class="twit"><ul class="twit-list"><li class="twit-info"><a href="http://twitter.com/' + username + '" class="link" rel="me"><img src="' + profileimageURL + '" alt="'+ username + 'twitter avatar" class="avatar"></a></li><li class="twit-info"><a href="http://twitter.com/' + username + '" class="link" rel="author">' + '@' + username + '</a></li><li class="twit-info"><small class="twit-meta"><time datetime="' + relative_time(tweet[i].created_at) + '" class="twit-timestamp" pubdate>Tweet Posted : <a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '" class="link">' + relative_time(tweet[i].created_at) + '</a></time></small></li><li class="twit-info"><p class="twit-status">' + status + '</p></li></ul></li>');
     }
 
     document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
