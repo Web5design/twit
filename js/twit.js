@@ -13,31 +13,7 @@ function twitterCallback(tweet) {
         status = status.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s<>]*[^.,;'">\:\s<>\)\]\!])/g, replaceUrl);
         status = status.replace(/\B@([_a-z0-9]+)/ig, replaceReply);
 
-        statusHTML.push(
-            '<li class="twit">
-                <ul class="twit-list">
-                    <li class="twit-info">
-                        <a href="http://twitter.com/' + username + '" class="link" rel="me"><img src="' + profileimageURL + '" alt="'+ username + 'twitter avatar" class="avatar"></a>
-                    </li>
-
-                    <li class="twit-info">
-                        <a href="http://twitter.com/' + username + '" class="link" rel="author">' + '@' + username + '</a>
-                    </li>
-
-                    <li class="twit-info">
-                        <small class="twit-meta">
-                            <time datetime="' + relative_time(tweet[i].created_at) + '" class="twit-timestamp" pubdate>
-                                Tweet Posted : <a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '" class="link">' + relative_time(tweet[i].created_at) + '</a>
-                            </time>
-                        </small>
-                    </li>
-
-                    <li class="twit-info">
-                        <p class="twit-status">' + status + '</p>
-                    </li>
-                </ul>
-            </li>'
-        );
+        statusHTML.push('<li class="twit"><ul class="twit-list"><li class="twit-info"><a href="http://twitter.com/' + username + '" class="link" rel="me"><img src="' + profileimageURL + '" alt="'+ username + 'twitter avatar" class="avatar"></a></li><li class="twit-info"><a href="http://twitter.com/' + username + '" class="link" rel="author">' + '@' + username + '</a></li><li class="twit-info"><small class="twit-meta"><time datetime="' + relative_time(tweet[i].created_at) + '" class="twit-timestamp" pubdate>Tweet Posted : <a href="http://twitter.com/' + username + '/statuses/' + tweet[i].id_str + '" class="link">' + relative_time(tweet[i].created_at) + '</a></time></small></li><li class="twit-info"><p class="twit-status">' + status + '</p></li></ul></li>');
     }
 
     document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
@@ -82,10 +58,12 @@ function relative_time(time_value) {
 window.onload = function() {
     var ajax_load            = "<img class='twit-loader' src='img/loading.gif' alt='Loading...'>",
         twitter_preferences  = {
-            count    : 2,
-            username : 'gryghostvisuals'
+            count    : 1,
+            username : 'gryghostvisuals',
+            retweets : true,
+            replies : false
         },
-        twitterUrl = 'http://twitter.com/statuses/user_timeline.json?screen_name=' + twitter_preferences.username + '&callback=twitterCallback&count=' + twitter_preferences.count,
+        twitterUrl = 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + twitter_preferences.username + '&callback=twitterCallback&count=' + twitter_preferences.count + '&include_rts=' + twitter_preferences.retweets + '&exclude_replies=' + twitter_preferences.replies;
         script     = document.createElement('script');
 
     $("#twitter_feed").html(ajax_load);

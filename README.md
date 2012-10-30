@@ -1,11 +1,11 @@
-# twit v0.0.5
+# twit v0.0.6
 ### Your Custom Twitter Widget : "Embed Tweets The Right Way"
 
 ### DEMO
-* [http://grayghostvisuals.koding.com/twit](http://grayghostvisuals.koding.com/twit)
+* [http://twit.grayghostvisuals.com](http://twit.grayghostvisuals.com)
 * Green light for any browser on all Operating Systems (Windows, Mac, Linux)
 
-[![http://grayghostvisuals.koding.com/twit](http://static.grayghostvisuals.com/github/twit.png)](http://grayghostvisuals.koding.com/twit)
+[![http://twit.grayghostvisuals.com](http://static.grayghostvisuals.com/github/twit.png)](http://twit.grayghostvisuals.com)
 
 
 ### TWIT'S RECIPE
@@ -43,8 +43,10 @@ window.onload = function() {
         twitter_preferences  = {
             count    : [enter_twit_count_here],
             username : &#39;[username_goes here]&#39;
+            retweets : [false, true],
+            replies  : [false, true]
         },
-        twitterUrl = &#39;http://twitter.com/statuses/user_timeline.json?screen_name=&#39; + twitter_preferences.username + &#39;&amp;callback=twitterCallback&amp;count=&#39; + twitter_preferences.count,
+        twitterUrl = &#39;http://twitter.com/statuses/user_timeline.json?screen_name=&#39; + twitter_preferences.username + &#39;&amp;callback=twitterCallback&amp;count=&#39; + twitter_preferences.count + &#39;&amp;include_rts=&#39; + twitter_preferences.retweets + &#39;&amp;exclude_replies=&#39; + twitter_preferences.replies;
         script     = document.createElement(&#39;script&#39;);
 
     $(&quot;#twitter_feed&quot;).html(ajax_load);
