@@ -1,4 +1,4 @@
-# twit v0.0.6
+# twit v0.0.7
 ### Your Custom Twitter Widget : "Embed Tweets The Right Way"
 
 ### DEMO

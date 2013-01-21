@@ -95,10 +95,13 @@ textarea {
    $Globals
    ========================================================================== */
 
-body {
-    background: #00384f;
-    color: #f9f9f9;
+html {
+    background: #00384f url(../img/twit-city.png) bottom left repeat-x;
+    height: 100%;
+}
 
+body {
+    color: #f9f9f9;
     font: normal normal 100%/1.5 "Helvetica Neue", sans-serif;
 }
 
@@ -109,38 +112,20 @@ body {
     padding: 1.5em 10em; /* 160px / 16px = 10em */
     position: relative;
 
-    background: url(../img/twit-bg.png) 50% 15% no-repeat;
+    background: url(../img/twit-bird.png) 50% 50% no-repeat;
 }
 
 
 /* ==========================================================================
-   $Title Module
+   $Logo Module
    ========================================================================== */
 
-.title-header {
-    margin: 0 auto;
-    position: absolute;
-    bottom: 1.875em; /* 30px / 16px = 1.875em */
-    width: 50em; /* 50em * 16px = 800px */
-}
-
-.title {
-    height: 4.0625em; /* 130px / 32px = 4.0625em */
-    width: 100%;
-
-    background: url(../img/twit-logo.png)  200px 0 no-repeat;
-
-    text-align: center;
+.logo {
+    background: url(../img/twit-logo.png) top left no-repeat;
+    width: 325px;
+    background-size: 325px;
+    height: 225px;
     text-indent: -999em;
-}
-
-.tagline {
-    color: #3f8098;
-
-    font-size: .875em;
-    text-align: center;
-    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.6),
-                 0  1px 1px rgba(255, 255, 255, 0.15);
 }
 
 
@@ -175,15 +160,15 @@ body {
  *
  */
 
-/* $General Markup Styling
- ======================== */
+/* $General Markup Styling For Demo. Feel free to customize.
+ =========================================================== */
 
 #twit-container {
     border-radius: 12px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.18);
     min-height: 8em;     /* 128px / 16px = 8em */
-    margin-left: 3.5em;  /* 56px / 16px = 3.5em */
-    margin-top: 4.625em; /* 74px / 16px = 4.625em */
+    margin-left: 2em;  /* 56px / 16px = 3.5em */
+    margin-top: -0.75em; /* 74px / 16px = 4.625em */
     padding: 0.125em;    /* 2px / 16px = 0.125em */
     position: absolute;
     width: 16em; /* 256px / 16px = 16em */
@@ -252,7 +237,7 @@ body {
 
 .twit .link:hover,
 .twit-status a:hover {
-    color: #18608d;
+    color: #d0dbe3;
 
     text-decoration: underline;
 }
@@ -260,6 +245,11 @@ body {
 .twit-list {
     list-style-type: none;
     padding: 0;
+}
+
+.twit .avatar {
+    border: 2px solid white;
+    border: 2px solid rgba(255,255,255,0.70);
 }
 
 .twit-meta {
@@ -277,43 +267,4 @@ body {
     color: #E6FFCB;
 
     text-indent: 8px;
-}
-
-
-/* ==========================================================================
-   $Footer
-   ========================================================================== */
-
-footer {
-    padding-top: 33.3333333333333em; /* 800px / 24 = 33.3333333333333em */
-
-    color: #efefef;
-
-    text-align: center;
-    font-size: 1.5em;
-}
-
-footer small {
-    font-size: .375em;
-}
-
-footer p {
-    margin: 0;
-}
-
-
-/* ==========================================================================
-   $Copyright Module
-   ========================================================================== */
-
-.copyright {
-    border-top: .0675em solid #15496b;
-    box-shadow: 0 -1px 0px #000;
-}
-
-.footer-entity {
-    color: #3f788d;
-
-    text-shadow: 0   1px 0px rgba(255,255,255,.3),
-                 0  -1px 0px rgba(0,0,0,.5);
 }
